@@ -5,7 +5,7 @@ public class hashTableMain {
 
         hashTable<String, Integer> hashTable = new hashTable<>();
 
-        String message = "To be or not to be";
+        String message = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
         String[] value = message.toLowerCase().split(" ");
 
@@ -20,6 +20,6 @@ public class hashTableMain {
             hashTable.add(word, val);
         }
         //System.out.println(value);
-        System.out.print(hashTable);
+        System.out.println(hashTable);
     }
 }
