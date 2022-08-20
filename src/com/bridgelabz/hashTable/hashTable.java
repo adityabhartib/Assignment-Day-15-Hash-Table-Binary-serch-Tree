@@ -69,9 +69,27 @@ public class hashTable<K, V> {
             int index = hashCode % numofbuckets;
             return index;
         }
+    public void remove(K word) {
+        myNode currentNode = head;
+        myNode previousNode = null;
+        while (currentNode != null && currentNode.getKey().equals(word)) {
+            head = currentNode.getNext();
+            return;
+        }
+        while (currentNode != null && !(currentNode.getKey().equals(word))) {
+            previousNode = currentNode;
+            currentNode = currentNode.getNext();
+        }
+        if (currentNode != null) {
+            previousNode.next = currentNode.next;
+        }
+        if (currentNode == null)
+            System.out.println("Not found");
+    }
 
 
-        @Override
+
+    @Override
         public String toString() {
             return " \n{" + head + "}";
         }

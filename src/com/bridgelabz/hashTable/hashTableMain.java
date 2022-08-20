@@ -21,5 +21,7 @@ public class hashTableMain {
         }
         //System.out.println(value);
         System.out.println(hashTable);
+        hashTable.remove("avoidable");
+        System.out.println(hashTable);
     }
 }
